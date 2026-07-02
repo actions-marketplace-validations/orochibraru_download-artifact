@@ -47,8 +47,10 @@ const { Inputs } = await import("../src/constants.js");
 const { ArtifactNotFoundError } = artifact;
 
 const mockInputs = (
+	// biome-ignore lint/suspicious/noExplicitAny: test file
 	overrides?: Partial<{ [K in (typeof Inputs)[keyof typeof Inputs]]?: any }>,
 ) => {
+	// biome-ignore lint/suspicious/noExplicitAny: test file
 	const inputs: Record<string, any> = {
 		[Inputs.Name]: "artifact-name",
 		[Inputs.Path]: "/some/artifact/path",
